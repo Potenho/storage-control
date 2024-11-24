@@ -1,0 +1,82 @@
+@import "../../../mixins.scss";
+
+section {
+    background-color: var(--primary-950);
+    position: fixed;
+    width: 100%;
+    padding-top: 3px;
+    display: flex;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-800);
+    justify-content: center;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        box-sizing: border-box;
+
+        .container {
+            display: flex;
+            justify-content: end;
+            flex: 1
+        }
+
+        .logo {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            cursor: pointer;
+        
+            img {
+                width: 60px;
+                filter: invert(90%) sepia(75%) saturate(466%) hue-rotate(280deg) brightness(100%) contrast(85%);
+                transition: transform 0.2s ease;
+            }
+        
+            h1 {
+                color: var(--text-100);
+                font-weight: 900;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+            justify-content: space-evenly;
+
+            button {
+                cursor: pointer;
+                padding: 3px;
+                font-weight: 400;
+                font-size: 18px;
+                color: var(--text-200);
+                transition: color ease 0.2s, box-shadow ease 0.2s;; ;
+
+                &:last-child {
+                    @include btn(var(--secondary-200), var(--accent-800), var(--secondary-500), -2px);
+                    font-weight: 300;
+                }
+
+                &:not(:last-child):hover {
+                    color: var(--text-50)
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+

@@ -1,0 +1,81 @@
+@import '../../../mixins.scss';
+
+:host {
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    
+
+    .section-title {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        .main-img {
+            width: 800px;
+            transform: translateY(-20px);
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            gap: 15vh;
+            width: 35%;
+            margin-left: auto;
+            margin-right: auto;
+
+            .title {
+                color: var(--text-50);
+                font-weight: 600;
+                font-size: 40px;
+                text-wrap:stable;
+    
+                b {
+                    color: var(--accent-400);
+                    text-shadow: 0px 0px 40px var(--secondary-600);
+                }
+            }
+
+            .card-container {
+                display: flex;
+            }
+        }
+
+        
+    }
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--textColor);
+    background-color: var(--secondaryColor);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+.card {
+    @include card;
+
+}
+
+.botton{
+    flex: 1;
+    @include btn-light;
+}
+

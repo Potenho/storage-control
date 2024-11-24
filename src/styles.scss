@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --text-50: rgb(246, 238, 242);
+    --text-100: rgb(238, 221, 228);
+    --text-200: rgb(221, 187, 202);
+    --text-300: rgb(204, 153, 175);
+    --text-400: rgb(187, 119, 149);
+    --text-500: rgb(170, 85, 122);
+    --text-600: rgb(136, 68, 98);
+    --text-700: rgb(102, 51, 73);
+    --text-800: rgb(68, 34, 49);
+    --text-900: rgb(34, 17, 24);
+    --text-950: rgb(17, 9, 12);
+    
+    --background-50: rgb(247, 238, 242);
+    --background-100: rgb(239, 220, 228);
+    --background-200: rgb(223, 185, 201);
+    --background-300: rgb(207, 150, 175);
+    --background-400: rgb(191, 115, 148);
+    --background-500: rgb(175, 80, 121);
+    --background-600: rgb(140, 64, 97);
+    --background-700: rgb(105, 48, 73);
+    --background-800: rgb(70, 32, 48);
+    --background-900: rgb(35, 16, 24);
+    --background-950: rgb(17, 8, 12);
+    
+    --primary-50: rgb(246, 238, 242);
+    --primary-100: rgb(238, 221, 230);
+    --primary-200: rgb(220, 188, 205);
+    --primary-300: rgb(203, 154, 179);
+    --primary-400: rgb(186, 120, 154);
+    --primary-500: rgb(168, 87, 129);
+    --primary-600: rgb(135, 69, 103);
+    --primary-700: rgb(101, 52, 77);
+    --primary-800: rgb(67, 35, 52);
+    --primary-900: rgb(34, 17, 26);
+    --primary-950: rgb(17, 9, 13);
+    
+    --secondary-50: rgb(246, 238, 238);
+    --secondary-100: rgb(238, 221, 221);
+    --secondary-200: rgb(221, 187, 188);
+    --secondary-300: rgb(204, 153, 154);
+    --secondary-400: rgb(187, 119, 120);
+    --secondary-500: rgb(170, 85, 87);
+    --secondary-600: rgb(136, 68, 69);
+    --secondary-700: rgb(102, 51, 52);
+    --secondary-800: rgb(68, 34, 35);
+    --secondary-900: rgb(34, 17, 17);
+    --secondary-950: rgb(17, 9, 9);
+    
+    --accent-50: rgb(247, 239, 237);
+    --accent-100: rgb(240, 223, 219);
+    --accent-200: rgb(225, 191, 183);
+    --accent-300: rgb(210, 160, 147);
+    --accent-400: rgb(195, 128, 111);
+    --accent-500: rgb(180, 96, 75);
+    --accent-600: rgb(144, 77, 60);
+    --accent-700: rgb(108, 58, 45);
+    --accent-800: rgb(72, 38, 30);
+    --accent-900: rgb(36, 19, 15);
+    --accent-950: rgb(18, 10, 8);
+    
+    
+    
+
+    //aqui em baixo muda as cores do site
+    --textColor: white;
+    --primarycolor: rgba(39,16,12,1);  
+    --secondaryColor: #170602;
+    --buttoncolor: var(--primary-300);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Funnel Sans", serif;
+    border: 0;
+    background: transparent;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--primary-950);
+}
