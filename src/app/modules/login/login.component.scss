@@ -20,7 +20,7 @@ form{
     flex-direction: column;
     gap: 15px;
     color: var(--textColor);
-    background-color: var(--secondaryColor);
+    background: radial-gradient(circle, rgba(8,152,196,1) 0%, rgba(6,74,94,1) 100%);
     font-size: 20px;
     font-weight: bold;
     padding: 60px;
@@ -52,12 +52,12 @@ form{
         border-radius: 5px;
         border-radius: 5px;
         font-size: 20px;
-        background-color: var(--primary-900);
+        background-color: var(--primary-800);
         color: var(--text-200);
         border: 0;
 
         &::placeholder {
-            color: var(--text-800);
+            color: var(--text-00);
         }
     }
     .btn-container {

@@ -33,12 +33,12 @@ section {
         
             img {
                 width: 60px;
-                filter: invert(90%) sepia(75%) saturate(466%) hue-rotate(280deg) brightness(100%) contrast(85%);
+                filter: invert(90%) sepia(75%) saturate(466%) hue-rotate(170deg) brightness(100%) contrast(85%);
                 transition: transform 0.2s ease;
             }
         
             h1 {
-                color: var(--text-100);
+                color: var(--text-50);
                 font-weight: 900;
             }
 
@@ -63,7 +63,7 @@ section {
                 transition: color ease 0.2s, box-shadow ease 0.2s;; ;
 
                 &:last-child {
-                    @include btn(var(--secondary-200), var(--accent-800), var(--secondary-500), -2px);
+                    @include btn(var(--accent-200), var(--accent-800), var(--accent-500), -2px);
                     font-weight: 300;
                 }
 

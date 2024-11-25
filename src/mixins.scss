@@ -35,13 +35,13 @@
 
 }
 
-@mixin card($cardPadding: 60px, $cardRadius: 10px) {
+@mixin card($cardPadding: 40px, $cardRadius: 10px) {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     font-weight: 500;
     color: var(--text-100);
-    background-color: var(--background-900);
+    background-color: var(--primary-800);
     padding: $cardPadding;
     border-radius: $cardRadius;
 }
