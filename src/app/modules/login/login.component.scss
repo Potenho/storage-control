@@ -1,7 +1,7 @@
 @import '../../../mixins.scss';
 
 :host {
-    display: block;
+    display: relative;
     height: 100%;
     width: 100%;
     display: flex;
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 95%;
+    height: 100%;
 }
 
 form{
@@ -20,7 +20,7 @@ form{
     flex-direction: column;
     gap: 15px;
     color: var(--textColor);
-    background: radial-gradient(circle, rgba(8,152,196,1) 0%, rgba(6,74,94,1) 100%);
+    background: var(--background-800);
     font-size: 20px;
     font-weight: bold;
     padding: 60px;
@@ -44,10 +44,12 @@ form{
     }
 
     label {
+        font-weight: 300;
         color: var(--text-100);
     }
 
     input{
+        font-weight: 200;
         padding: 10px;
         border-radius: 5px;
         border-radius: 5px;

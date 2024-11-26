@@ -1,0 +1,16 @@
+:host {
+    height: 100%;
+    display: block;
+}
+
+.gradient-background {
+    height: 3700px;
+    z-index: -2;
+    width: 3000px;
+    position: fixed;
+    right: -100;
+    top: -20%;
+    overflow: hidden;
+    background-color: red;
+    background: radial-gradient(circle,  var(--primary-800) 0%, rgba(255,49,49,0) 60%);
+}
