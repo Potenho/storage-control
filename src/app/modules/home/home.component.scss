@@ -1,6 +1,8 @@
 @import '../../../mixins.scss';
 
 :host {
+    padding-top: 30px;
+    box-sizing: border-box;
     display: relative;
     width: 100%;
     display: flex;
@@ -38,11 +40,17 @@
                 color: var(--text-50);
                 font-weight: 600;
                 font-size: 40px;
-                text-wrap:stable;
+                text-wrap: stable;
     
                 b {
                     color: var(--accent-400);
                     text-shadow: 0px 0px 40px var(--accent-600);
+                    scale: 1;
+                    transition: color ease 0.2s;
+
+                    &:hover {
+                        color: var(--accent-500);
+                    }
                 }
             }
 

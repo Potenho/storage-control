@@ -1,6 +1,9 @@
 @import "../../../mixins.scss";
 
 section {
+    height: 60px;
+    z-index: 1;
+    top: 0;
     background-color: var(--primary-950);
     position: fixed;
     width: 100%;

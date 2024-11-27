@@ -83,6 +83,8 @@ html, body {
 }
 
 body {
+    padding-top: 60px;
+    box-sizing: border-box;
     overflow-x: hidden;
     background-color: var(--primary-950);
 }
