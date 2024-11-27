@@ -8,7 +8,7 @@ import { NavMenuComponent } from '../../design-system/nav-menu/nav-menu.componen
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, NavMenuComponent],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
