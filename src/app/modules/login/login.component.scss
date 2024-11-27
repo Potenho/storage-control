@@ -1,5 +1,5 @@
-@use '../../../mixins.scss';
-@use '../../../animations.scss';
+@import '../../../mixins.scss';
+@import '../../../animations.scss';
 
 :host {
     display: relative;
@@ -105,7 +105,7 @@ form{
 
         button {
             flex: 1;
-            @include mixins.btn-light;
+            @include btn-light;
         }
     }
 }
