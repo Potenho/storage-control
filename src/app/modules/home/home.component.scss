@@ -1,4 +1,4 @@
-@import '../../../mixins.scss';
+@use '../../../mixins.scss';
 
 :host {
     padding-top: 30px;
@@ -61,7 +61,7 @@
                     'block3 block3';
 
                 .card {
-                    @include card;
+                    @include mixins.card;
                     margin: 6px;
                     color: var(--primary-800);
                     font-weight: 300;
@@ -90,7 +90,7 @@
             }
 
             .btn-login { 
-                @include btn(var(--accent-600), var(--accent-200), var(--accent-500));
+                @include mixins.btn(var(--accent-600), var(--accent-200), var(--accent-500));
                 font-size: 20px;
                 font-weight: 100;
             }
@@ -104,7 +104,7 @@
 
 .botton{
     flex: 1;
-    @include btn-light;
+    @include mixins.btn-light;
     
 }
 
