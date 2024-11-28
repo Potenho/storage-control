@@ -1,0 +1,28 @@
+<div class="main">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p class="title">Login</p>
+        <div class="login">
+            <label for="usuario">Usuário:</label>
+            <br>
+            <input type="text" id="usuario" formControlName="usuario" placeholder="Digite seu Usuario"/>
+
+            @if (form.get('usuario')?.invalid && form.get('usuario')?.touched && hasClickedSubmit) {
+                <div> Usuário é obrigatório </div>
+            }        
+        </div>  
+        <div class="senha">
+            <label for="senha">Senha:</label>
+            <br>
+            <input type="password" id="senha" formControlName="senha" placeholder="Digite a senha" />
+            
+            @if (form.get('senha')?.invalid && form.get('senha')?.touched && hasClickedSubmit) {
+                <span *ngIf="form.get('senha')?.errors?.['required']">Digite a senha</span>
+            }
+            
+        </div>
+        <div class="btn-container">
+            <button type="submit" [disabled]="form.invalid">Enviar</button>
+        </div>
+        
+    </form>
+</div>
