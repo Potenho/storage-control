@@ -1,0 +1,31 @@
+<div class="main">
+    <h1 class="title">Produtos</h1>
+    <section>
+        <button class="create" (click)="openModal('create')">Criar Produto</button>
+        
+        <app-table 
+        [tableData]="tableData()"
+        (updateOutput)="onUpdate($event)"
+        (deleteOutput)="onDelete($event)"
+        ></app-table>
+    </section>
+</div>
+
+
+@if (modalSignals.create()) {
+    <app-create-modal
+    [(isModalOpen)]="modalSignals.create"
+    (newItem)="onNewProductOrUpdate($event)"
+    ></app-create-modal>
+}
+
+@if (modalSignals.update()) {
+    <app-create-modal
+    [(isModalOpen)]="modalSignals.update"
+    (newItem)="onNewProductOrUpdate($event)"
+    [data]="dataToUpdate()!"
+    ></app-create-modal>
+}
+
+
+

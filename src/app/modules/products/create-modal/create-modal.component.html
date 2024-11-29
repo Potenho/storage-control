@@ -1,0 +1,36 @@
+<app-modal (overlayClick)="isModalOpen.set(false)">
+    <form [formGroup]="form">
+        <h1 class="title">
+            @if (data() && data()?.id) {
+                Modificar Produto
+            } @else {
+                Criar Produto
+            }
+            
+        </h1>
+        <section>
+            <div class="login">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" formControlName="name" placeholder="Nome"/>    
+            </div>
+            <div class="login">
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" formControlName="description" placeholder="Produto"/>    
+            </div>
+            <div class="login-array">
+                <div class="login">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" formControlName="quantity" placeholder="Quantidade"/>    
+                </div>
+                <div class="login">
+                    <label for="price">Preço R$:</label>
+                    <input type="number" id="price" formControlName="price" placeholder="Preço"/>    
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" [ngClass]="{'invalid': form.invalid}" [disabled]="form.invalid" (click)="onSubmit()">Enviar</button>
+                <button class="cancel" type="submit" (click)="isModalOpen.set(false)">Cancelar</button>
+            </div>
+        </section>
+    </form>
+</app-modal>

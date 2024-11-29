@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { BackendService } from '../../services/backend.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -9,5 +10,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nav-menu.component.scss'
 })
 export class NavMenuComponent {
+  backendService = inject(BackendService);
 
+  logout() {
+    this.backendService.logout();
+  }
 }

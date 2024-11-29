@@ -1,0 +1,32 @@
+<app-modal (overlayClick)="isModalOpen.set(false)">
+    <form [formGroup]="form">
+        <h1 class="title">
+            @if (data() && data()?.id) {
+                Modificar Funcionário
+            } @else {
+                Adicionar Funcionário
+            }
+            
+        </h1>
+        <section>
+            <div class="login">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" formControlName="name" placeholder="Nome"/>    
+            </div>
+            <div class="login">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" formControlName="cpf" placeholder="CPF"/>    
+            </div>
+            <div class="login-array">
+                <div class="login">
+                    <label for="position">Cargo:</label>
+                    <input type="text" id="position" formControlName="position" placeholder="Cargo"/>    
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" [ngClass]="{'invalid': form.invalid}" [disabled]="form.invalid" (click)="onSubmit()">Enviar</button>
+                <button class="cancel" type="submit" (click)="isModalOpen.set(false)">Cancelar</button>
+            </div>
+        </section>
+    </form>
+</app-modal>

@@ -1,28 +1,26 @@
-<div class="main">
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <p class="title">Login</p>
-        <div class="login">
-            <label for="usuario">Usuário:</label>
-            <br>
-            <input type="text" id="usuario" formControlName="usuario" placeholder="Digite seu Usuario"/>
 
-            @if (form.get('usuario')?.invalid && form.get('usuario')?.touched && hasClickedSubmit) {
-                <div> Usuário é obrigatório </div>
-            }        
+<div class="main">
+    <form [formGroup]="form">
+        <p class="title">Registrar</p>
+        <div class="login">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" formControlName="name" placeholder="Digite seu Nome"/>  
+        </div>
+        <div class="login">
+            <label for="email">Email:</label>
+            <input type="text" id="email" formControlName="email" placeholder="Digite seu Email"/>    
         </div>  
         <div class="senha">
             <label for="senha">Senha:</label>
-            <br>
-            <input type="password" id="senha" formControlName="senha" placeholder="Digite a senha" />
-            
-            @if (form.get('senha')?.invalid && form.get('senha')?.touched && hasClickedSubmit) {
-                <span *ngIf="form.get('senha')?.errors?.['required']">Digite a senha</span>
-            }
-            
+            <input type="password" id="password" formControlName="password" placeholder="Digite a Senha" />
         </div>
+        @if (loginError) {
+            <span class="error">* Esse email já existe</span>
+        }
         <div class="btn-container">
-            <button type="submit" [disabled]="form.invalid">Enviar</button>
+            <button type="submit" [ngClass]="{'invalid': form.invalid}" [disabled]="form.invalid" (click)="onSubmit()">Enviar</button>
         </div>
+        <span class="register">Já tem conta? <a [routerLink]="'/login'">Fazer login</a></span>
         
     </form>
 </div>

@@ -1,0 +1,5 @@
+<div id="overlay" class="overlay" (click)="overlayClick.emit()">
+    <section class="modal" (click)="$event.stopPropagation()">
+        <ng-content></ng-content>
+    </section>
+</div>

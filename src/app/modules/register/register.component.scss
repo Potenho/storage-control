@@ -1,0 +1,143 @@
+@import '../../../mixins.scss';
+@import '../../../animations.scss';
+
+:host {
+    display: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--textColor);
+    background: var(--background-800);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 60px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 10px;
+    margin: 5px;
+    position: relative;
+
+    &::after, &::before {
+        --angle: 0deg;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: conic-gradient(from var(--angle), var(--primary-500), var(--accent-500), var(--accent-500), var(--primary-500));
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        padding: 4px;
+        border-radius: 10px;
+        animation: 3s spin linear infinite;
+    }
+
+    &::before {
+        filter: blur(20px);
+        opacity: 25%;
+    }
+
+    .title {
+        position: relative;
+        z-index: 9;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 18px;
+        box-sizing: border-box;
+
+        &::before {
+            z-index: -1;
+            content: '';
+            text-align: center;
+            position: absolute;
+            width: 50%;
+            height: 30%;
+            background-color: var(--accent-500);
+            top: 50%;
+            left: 50%;
+            translate: -50% -40%;
+        }
+    }
+
+    .login, .senha{
+        padding-top: 10px;
+        padding-bottom:10px ;
+    }
+
+    label {
+        font-weight: 300;
+        color: var(--text-100);
+    }
+
+    .error {
+        font-size: 17px;
+        font-weight: 100;
+        padding: 3px;
+        border-radius: 5px;
+        background-color: var(--accent-500);
+    }
+
+    input{
+        width: -webkit-fill-available;
+        font-weight: 200;
+        padding: 10px;
+        border-radius: 5px;
+        border-radius: 5px;
+        font-size: 20px;
+        background-color: var(--primary-800);
+        color: var(--text-200);
+        border: 0;
+
+        &::placeholder {
+            color: var(--text-00);
+        }
+    }
+    .register {
+        font-weight: 100;
+        font-size: 17px;
+        color: var(--text-100);
+
+        a {
+            color: var(--accent-500);
+            text-decoration: none;
+        }
+    }
+    .btn-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        button {
+            width: 100%;
+            flex: 1;
+            @include btn-light;
+
+            &.invalid {
+                background-color: var(--primary-800);
+
+                &:hover {
+                    transform: translateY(0);
+                    box-shadow: 0px 0px 0px transparent;
+                }
+            }
+
+            
+        }
+    }
+}

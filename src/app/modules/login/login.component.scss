@@ -85,7 +85,16 @@ form{
         color: var(--text-100);
     }
 
+    .error {
+        font-size: 17px;
+        font-weight: 100;
+        padding: 3px;
+        border-radius: 5px;
+        background-color: var(--accent-500);
+    }
+
     input{
+        width: -webkit-fill-available;
         font-weight: 200;
         padding: 10px;
         border-radius: 5px;
@@ -99,13 +108,37 @@ form{
             color: var(--text-00);
         }
     }
+    .register {
+        font-weight: 100;
+        font-size: 17px;
+        color: var(--text-100);
+
+        a {
+            color: var(--accent-500);
+            text-decoration: none;
+        }
+    }
+
     .btn-container {
+        width: 100%;
         display: flex;
         justify-content: center;
 
         button {
+            width: 100%;
             flex: 1;
             @include btn-light;
+
+            &.invalid {
+                background-color: var(--primary-800);
+
+                &:hover {
+                    transform: translateY(0);
+                    box-shadow: 0px 0px 0px transparent;
+                }
+            }
+
+            
         }
     }
 }

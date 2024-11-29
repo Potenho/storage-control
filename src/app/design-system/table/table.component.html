@@ -1,0 +1,42 @@
+<div class="main">
+    <table class="container">
+        <thead>
+            <tr>
+                @for (header of tableData()?.header; track header) {
+                <th>
+                    <h1>{{header}}</h1>
+                </th>
+                }
+                <th>
+                    <h1></h1>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (row of tableData()?.body; track row) {
+            <tr>
+                @for (cell of row.cells; track cell) {
+                <td>{{cell}}</td>
+                }
+                <td>
+                    <button class="butao" (click)="updateOutput.emit(row.data)">
+                        <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 16C21 18.8284 21 20.2426 20.1213 21.1213C19.2426 22 17.8284 22 15 22H9C6.17157 22 4.75736 22 3.87868 21.1213C3 20.2426 3 18.8284 3 16V8C3 5.17157 3 3.75736 3.87868 2.87868C4.75736 2 6.17157 2 9 2H15C17.8284 2 19.2426 2 20.1213 2.87868C21 3.75736 21 5.17157 21 8V12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M8 2V6M8 22V10" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 12H4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 16H4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2 8H4" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M11.5 6.5H16.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M11.5 10H16.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                    </button>
+                    <button class="butao delete" (click)="deleteOutput.emit(row.data)">
+                      <svg width="30px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6M14 10V17M10 10V17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg></button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

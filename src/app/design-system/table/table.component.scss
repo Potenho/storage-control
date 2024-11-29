@@ -1,0 +1,93 @@
+@import '../../../mixins.scss';
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container th h1 {
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #185875;
+}
+
+
+.butao {
+  @include btn(var(--primary-700), var(--text-200), var(--primary-800), 0px);
+  margin: 3px;
+  &.delete {
+    background-color: var(--accent-500);
+
+    &:hover {
+        box-shadow: 0px 0px 60px var(--accent-500);
+    }
+  }
+}
+
+.container td {
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+  -moz-box-shadow: 0 2px 2px -2px #0E1119;
+  box-shadow: 0 2px 2px -2px #0E1119;
+}
+
+.container {
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  display: table;
+  color: var(--text-300);
+  border: 4px var(--primary-600) solid;
+  border-radius: 8px;
+}
+
+.container td,
+.container th {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.container tr:nth-child(odd) {
+  background-color: var(--primary-800);
+}
+
+/* Background-color of the even rows */
+.container tr:nth-child(even) {
+  background-color: var(--primary-900);
+}
+
+.container th {
+  background-color: var(--background-950);
+}
+
+.container td:first-child {
+  color: var(--text-300);
+}
+
+.container tr:hover {
+  background-color: #464A52;
+  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+  -moz-box-shadow: 0 6px 6px -6px #0E1119;
+  box-shadow: 0 6px 6px -6px #0E1119;
+}
+
+.container td:hover {
+  background-color: var(--background-300); //hover color
+  color: var(--primary-700); //text hover color
+  font-weight: bold;
+
+  //box-shadow: var(--background-500) -1px 1px, var(--background-500) -2px 2px, var(--background-500) -3px 3px, var(--background-500) -4px 4px, var(--background-500) -5px 5px, var(--background-500) -6px 6px;
+  //transform: translate3d(6px, -6px, 0);
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}

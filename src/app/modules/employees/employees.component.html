@@ -1,0 +1,31 @@
+<div class="main">
+    <h1 class="title">Funcionários</h1>
+    <section>
+        <button class="create" (click)="openModal('create')">Novo funcionário</button>
+        
+        <app-table 
+        [tableData]="tableData()"
+        (updateOutput)="onUpdate($event)"
+        (deleteOutput)="onDelete($event)"
+        ></app-table>
+    </section>
+</div>
+
+
+@if (modalSignals.create()) {
+    <app-create-modal
+    [(isModalOpen)]="modalSignals.create"
+    (newItem)="onNewEmployeeOrUpdate($event)"
+    ></app-create-modal>
+}
+
+@if (modalSignals.update()) {
+    <app-create-modal
+    [(isModalOpen)]="modalSignals.update"
+    (newItem)="onNewEmployeeOrUpdate($event)"
+    [data]="dataToUpdate()!"
+    ></app-create-modal>
+}
+
+
+

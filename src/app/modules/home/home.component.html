@@ -3,7 +3,11 @@
         <img class="main-img" src="/assets/masked-image-storage.png" alt="">
         <div class="section">
             <div class="title">
-                <H1>Gestor de Recursos <b>Apenas</b> para Seu Negócio!</H1>
+                @if (backendService.loggedIn()) {
+                    <H1>Bem vindo(a), <b>{{name}}!</b></H1>
+                } @else {
+                    <H1>Gestor de Recursos <b>Apenas</b> para Seu Negócio!</H1>
+                }
             </div>
             <span class="card-container">
                 <div class="card" style="grid-area: block1; color: var(--text-50)" >
@@ -15,9 +19,11 @@
                 </div>
                 <div class="card accent-1" style="grid-area: block3;">
                     <h4><b>Omnira</b>: a solução inteligente que transforma <b>segurança</b>, controle em <b>produtividade</b> e <b>inovação</b> para sua empresa.</h4>
-                    <div style="display: flex; justify-content: center;">
-                        <button [routerLink]="'/login'" class="btn-login">Fazer Login</button>
-                    </div>
+                    @if (!backendService.loggedIn()) {
+                        <div style="display: flex; justify-content: center;">
+                            <button [routerLink]="'/login'" class="btn-login">Fazer Login</button>
+                        </div>
+                    }
                     
                 </div>
             </span>
